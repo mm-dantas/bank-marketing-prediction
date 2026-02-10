@@ -60,13 +60,13 @@ Foram testados três abordagens para verificar a performance preditiva:
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+    git clone [https://github.com/mm-dantas/bank-marketing-prediction]
     ```
 2.  Instale as dependências necessárias:
     ```bash
     pip install pandas sklearn plotly matplotlib
     ```
-3.  Execute o notebook `classificacao_investimento.ipynb` (ou o nome que você definiu) em seu ambiente Jupyter ou Google Colab.
+3.  Execute o notebook `bank-marketing-prediction.ipynb` (ou o nome que você definiu) em seu ambiente Jupyter ou Google Colab.
 
 ## 💾 Exportação do Modelo
 
