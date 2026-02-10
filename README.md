@@ -60,13 +60,13 @@ Foram testados três abordagens para verificar a performance preditiva:
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/mm-dantas/bank-marketing-prediction]
+    git clone [https://github.com/mm-dantas/bank-marketing-prediction.git](https://github.com/mm-dantas/bank-marketing-prediction.git)
     ```
 2.  Instale as dependências necessárias:
     ```bash
     pip install pandas sklearn plotly matplotlib
     ```
-3.  Execute o notebook `bank-marketing-prediction.ipynb` (ou o nome que você definiu) em seu ambiente Jupyter ou Google Colab.
+3.  Execute o notebook (arquivo `.ipynb`) em seu ambiente Jupyter ou Google Colab.
 
 ## 💾 Exportação do Modelo
 
@@ -84,13 +84,18 @@ import pickle
 modelo = pd.read_pickle('modelo_arvore.pkl')
 encoder = pd.read_pickle('modelo_onehotenc.pkl')
 
-# Novos dados
+# Novos dados (Exemplo de um cliente)
 novo_cliente = pd.DataFrame({
     'idade': [45],
-    'estado_civil':['solteiro (a)'],
-    'escolaridade':['superior'],
-    # ... demais colunas
+    'estado_civil': ['solteiro (a)'],
+    'escolaridade': ['superior'],
+    'inadimplencia': ['nao'],
+    'saldo': [23000],
+    'fez_emprestimo': ['nao'],
+    'tempo_ult_contato': [800],
+    'numero_contatos': [4]
 })
 
 # Previsão
 resultado = modelo.predict(encoder.transform(novo_cliente))
+print(f"O cliente vai investir? {resultado[0]}")
